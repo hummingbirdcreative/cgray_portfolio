@@ -29,8 +29,20 @@ export const AnimatedGradientText = styled.h1`
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
 `;
+export const Container = styled.div`
+  background-image: url("https://i.imgur.com/xw7hBol.png");
+  padding: 1rem;
+  padding-top: 5rem;
+  margin-top:-5px;
+  
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+`;
 
 export const LeftSection = styled.div`
+
   width: 100%;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 80%;

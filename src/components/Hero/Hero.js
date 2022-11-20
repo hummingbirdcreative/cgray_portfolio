@@ -7,6 +7,7 @@ import { RightSection } from './ProfilePhotoStyles';
 
 const Hero = (props) => (
   <>
+
     <Section style={{ height: "600px" }}row nopadding>
       <LeftSection>
         <SectionTitle main center style={{ marginTop: "50px", marginBottom: 1, paddingBottom: 1 }}>
@@ -24,6 +25,7 @@ const Hero = (props) => (
       </RightSection>
     
     </Section>
+   
   </>
 );
 
