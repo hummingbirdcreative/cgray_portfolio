@@ -1,10 +1,27 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  background-color: #Defe7b;
+  padding: 1rem;
+  padding-top: 5rem;
+  margin-top:-5px;
+  
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+`;
+
 export const Img = styled.img`
-  width:100%;
-  height:100%;
+  width: 400px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height:275px;
   object-fit: cover;
   overflow: hidden;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
 `
 
 export const GridContainer = styled.section`
@@ -20,13 +37,14 @@ row-gap: 3rem;
   padding: 2rem;
   padding-bottom: 0;
 }
-
 `
 export const BlogCard = styled.div`
+  background-color: white;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
+  height: 650px;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -35,24 +53,23 @@ export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
-
 `;
 
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
-  letter-spacing: 2px;
-  color: #9cc9e3;
-  padding: .5rem 0;
+  //letter-spacing: 2px;
+  color: #7187C3;
+  padding: 2rem 0;
   font-size: ${(props) => props.title ? '3rem' : '2rem'};
 `;
-
+1
 export const Hr = styled.hr`
   width: 50px;
   height: 3px;
   margin: 20px auto;
   border: 0;
-  background: #d0bb57;
+  background: #Defe7b;
 `;
 
 export const Intro = styled.div`
@@ -67,12 +84,13 @@ export const Intro = styled.div`
 
 
 export const CardInfo = styled.p`
+font-family: 'Hind', sans-serif;
   width: 100%;
   padding: 0 50px;
-  color: #e4e6e7;
+  color: #EE5B25;
   font-style: 2rem;
   line-height: 24px;
-  text-align: justify;
+  text-align: center;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding:.3rem
   
@@ -82,22 +100,21 @@ export const CardInfo = styled.p`
 
 export const UtilityList = styled.ul`
   list-style-type: none;
-  padding: 0;
+  padding: 0 5px;
   display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
+  justify-content: center;
+  margin: 1rem 0 2.5rem 0;
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
+transition: 0.3s ease;
+color: #7187C3;
+border-radius: 50px;
+  padding: 8px;
+&:hover {
+    background-color: #Defe7b;
+    transform: scale(1.2);
+    cursor: pointer;
 }
 `;
 
@@ -107,6 +124,10 @@ justify-content: space-around;
 padding: 2rem;
 `
 export const Tag = styled.li`
-color: #d8bfbf;
+color: #Defe7b;;
 font-size: 1.5rem;
+@media ${(props) => props.theme.breakpoints.sm} {
+    padding:.3rem;
+    overflow: hidden;
+  }
 `
