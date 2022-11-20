@@ -1,51 +1,31 @@
-import React, { useState, useRef, useEffect } from 'react';
-
-import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from './TimeLineStyles';
+import GitHubCalendar from "react-github-calendar";
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { TimeLineData } from '../../constants/constants';
-
-const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
+import { Container } from "./TimeLineStyles";
 
 const Timeline = () => {
-  // const [activeItem, setActiveItem] = useState(0);
-  // const carouselRef = useRef();
-
-  // const scroll = (node, left) => {
-  //   return node.scrollTo({ left, behavior: 'smooth' });
-  // }
-
-  // const handleClick = (e, i) => {
-  //   e.preventDefault();
-
-  //   if (carouselRef.current) {
-  //     const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length));
-      
-  //     scroll(carouselRef.current, scrollLeft);
-  //   }
-  // }
-
-  // const handleScroll = () => {
-  //   if (carouselRef.current) {
-  //     const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length);
-
-  //     setActiveItem(index);
-  //   }
-  // }
-
-  // // snap back to beginning of scroll when window is resized
-  // // avoids a bug where content is covered up if coming from smaller screen
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     scroll(carouselRef.current, 0);
-  //   }
-
-  //   window.addEventListener('resize', handleResize);
-  // }, []);
-
   return (
-    <div>
-      Timeline
-    </div>
+    <Container>
+    <Section id="about" style={{ paddingTop: "4rem" }}>
+    <SectionDivider colorAlt />
+      <SectionTitle style={{ paddingTop: "4rem" }}>About Me</SectionTitle>
+      <SectionText style={{ paddingBottom: "0" }}>
+      I am a full-stack web developer who enjoys creating precise code to solve problems creatively. With a background in design and customer service, I am passionate about visual aesthetics and good design that works uniquely for each client’s needs. I am a problem solver who has cultivated the ability to adapt quickly and find concise solutions.      </SectionText>
+      <p style={{ justifyContent: "center", paddingBottom: "10px" }}>
+      <h1 className="project-heading" style={{ paddingTop: "0", paddingBottom: "20px", color: "#ee5b25" }}>
+        Days I Code
+      </h1>
+      <GitHubCalendar
+        username="hummingbirdcreative"
+        blockSize={15}
+        blockMargin={5}
+        color="#c084f5"
+        fontSize={16}
+      />
+    </p>
+    <br />
+      
+    </Section>
+    </Container>
   );
 };
 
